@@ -5,18 +5,18 @@ API Documentation
 ---
 
 - [Splinterlands-API](#splinterlands-api)
-  * [API](#api)
     + [General](#general)
       - [Game Settings](#game-settings)
       - [Transaction Lookup](#transaction-lookup)
       - [Transaction History](#transaction-history)
       - [Global Card Stats](#global-card-stats)
+      - [Card Details](#card-details)
       - [Card Lookup](#card-lookup)
       - [Player Collection](#player-collection)
       - [Check Promo Code](#check-promo-code)
     + [Market](#market)
-      - [Market Listings](#market-listings)
-      - [Grouped Market Listings](#grouped-market-listings)
+      - [Market Listings - All](#market-listings---all)
+      - [Grouped Market Listings - Summary](#grouped-market-listings---summary)
       - [Market Transaction Lookup](#market-transaction-lookup)
       - [Player Market Sale History](#player-market-sale-history)
       - [Card Pack Purchase Lookup](#card-pack-purchase-lookup)
@@ -25,14 +25,18 @@ API Documentation
       - [Player - Last 50 Matches](#player---last-50-matches)
       - [Battle Transaction Lookup](#battle-transaction-lookup)
     + [Player Status](#player-status)
-      - [Player Settings - Login](#player-settings---login)
+      - [Get Player Balances](#get-player-balances)
       - [Player Settings - General](#player-settings---general)
+      - [Player Settings - Login](#player-settings---login)
       - [Player Quest](#player-quest)
       - [Referrals](#referrals)
+    + [Guilds](#guilds)
+      - [Guild Members](#guild-members)
+      - [Guild Lookup](#guild-lookup)
+
 
 ---
 
-## API
 ### General
 
 #### Game Settings
@@ -87,6 +91,26 @@ num_burned: "159" <br>
 num_cards: "8026" <br>
 total_burned_xp: "5540" <br>
 total_xp: "879140" <br>
+
+#### Card Details
+> https://steemmonsters.com/cards/get_details
+
+_Example Response:_  
+
+>color: "Red" <br>
+created_block_num: null <br>
+distribution: […] <br>
+drop_rate: 80 <br>
+editions: "0,1" <br>
+id: 1 <br>
+is_starter: false <br>
+last_update_tx: null <br>
+name: "Goblin Shaman" <br>
+rarity: 1 <br>
+stats: {…} <br>
+sub_type: null <br>
+total_printed: 174855 <br>
+type: "Monster" <br>
 
 #### Card Lookup
 > https://steemmonsters.com/cards/find?ids=C3-79-UUT7TSLVN4
@@ -301,6 +325,25 @@ team_hash: "5c32b85eb1d319ef3ec546aa0feb0975" <br>
 ---
 
 ### Player Status
+#### Get Player Balances
+> https://steemmonsters.com/players/balances?username=ottermaker
+
+_Example Response:_
+
+>0: {player: "ottermaker", token: "BETA", balance: 0} <br>
+balance: 0 <br>
+player: "ottermaker" <br>
+token: "BETA" <br>
+1: {player: "ottermaker", token: "DEC", balance: 232373.361} <br>
+balance: 232373.361 <br>
+player: "ottermaker" <br>
+token: "DEC" <br>
+2: {player: "ottermaker", token: "ECR", balance: null, last_reward_block: null} <br>
+balance: null <br>
+last_reward_block: null <br>
+player: "ottermaker" <br>
+token: "ECR" <br>
+
 #### Player Settings - General
 > https://steemmonsters.com/players/details?name=kiokizz
 
@@ -326,7 +369,7 @@ wins: 28584  <br>
 #### Player Settings - Login
 > https://steemmonsters.com/players/login?name=kiokizz
 
-More detailed player settings.
+More detailed player settings. Known to update more slowly than [Player Settings - General](#player-settings---general).
 
 #### Player Quest
 > https://steemmonsters.com/players/quests?username=kiokizz
@@ -356,3 +399,41 @@ join_date: "2018-10-30T05:35:27.203Z" <br>
 name: "sm-starter-beta" <br>
 rating: 781 <br>
 starter_pack_purchase: true <br>
+
+---
+
+### Guilds
+#### Guild Members
+> https://steemmonsters.com/guilds/members?guild_id=d14d94bfab9f2532e26c33732cdba602d316f5bf
+
+_Example Response:_
+
+>data: "{"contributions":{"quest_lodge":57}}" <br>
+guild_id: "d14d94bfab9f2532e26c33732cdba602d316f5bf" <br>
+is_online: false <br>
+join_date: "2019-07-29T23:17:00.000Z" <br>
+player: "lava-heron" <br>
+rank: 1 <br>
+rating: 3320 <br>
+status: "active" <br>
+
+#### Guild Lookup
+> https://steemmonsters.com/guilds/find?id=d14d94bfab9f2532e26c33732cdba602d316f5bf
+
+_Example Response:_
+
+>announcements: [] <br>
+buildings: "{"guild_hall":{"level":6,"contributions":210000},"quest_lodge":{"level":6,"contributions":555}}" <br>
+created_date: "2019-07-29T23:13:12.000Z" <br>
+data: "{"crest":{"banner":"blue","decal":null}}" <br>
+description: "Guild for Herons Unlimited accounts.…" <br>
+id: "d14d94bfab9f2532e26c33732cdba602d316f5bf" <br>
+language: "English" <br>
+level: 6 <br>
+membership_type: "invite_only" <br>
+motto: "Herons Unlimited" <br>
+name: "Herons Unlimited" <br>
+num_members: "21" <br>
+owner: "zigzag-heron" <br>
+rank: "14" <br>
+rating: "52409" <br>
