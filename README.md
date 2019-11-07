@@ -15,6 +15,7 @@ API Documentation
       - [Player Collection](#player-collection)
       - [Check Promo Code](#check-promo-code)
     + [Market](#market)
+      - [Purchase Settings](#purchase-settings)
       - [Market Listings - All](#market-listings---all)
       - [Grouped Market Listings - Summary](#grouped-market-listings---summary)
       - [Market Transaction Lookup](#market-transaction-lookup)
@@ -34,25 +35,32 @@ API Documentation
       - [Guild Members](#guild-members)
       - [Guild Lookup](#guild-lookup)
 
-
 ---
 
 ### General
 
 #### Game Settings
->*https://steemmonsters.com/purchases/settings*
+> https://steemmonsters.com/settings
 
 _Example Response:_
 
->booster_pack_price: 2 <br>
-market_fee: 500 <br>
-paypal_acct: "matt@steemmonsters.com" <br>
-paypal_sandbox: false <br>
-sbd_price: 0.7203524 <br>
-starter_pack_price: 10 <br>
-starter_pack_price_account_create: 10 <br>
-steem_price: 0.1502343 <br>
+>account: "steemmonsters" <br>
+active_auth_ops: […] <br>
+alpha_xp: [20, 100, 250, 1000] <br>
+asset_url: "https://d36mxiodymuqjm.cloudfront.net/" <br>
+battles: {…} <br>
+beta_gold_xp: [200, 400, 800, 2000] <br>
+beta_xp: [15, 75, 175, 750] <br>
+… <br>
+supported_currencies: […] <br>
+timestamp: 1573117479346 <br>
+transfer_cooldown_blocks: 201600 <br>
+trx_price: 0.0198557 <br>
 usd_enabled: true <br>
+version: "0.7.0" <br>
+xp_levels: […] <br>
+
+General game settings including market prices of DEC and TRX.
 
 #### Transaction Lookup
 > https://steemmonsters.com/transactions/lookup?trx_id=09c8ac9db08d246696fa795cbf03ff07b83303e6
@@ -149,6 +157,22 @@ valid: false
 ---
 
 ### Market
+
+#### Purchase Settings
+>https://steemmonsters.com/purchases/settings
+
+_Example Response:_
+
+>booster_pack_price: 2 <br>
+market_fee: 500 <br>
+paypal_acct: "matt@steemmonsters.com" <br>
+paypal_sandbox: false <br>
+sbd_price: 0.7203524 <br>
+starter_pack_price: 10 <br>
+starter_pack_price_account_create: 10 <br>
+steem_price: 0.1502343 <br>
+usd_enabled: true <br>
+
 #### Market Listings - All
 > https://steemmonsters.com/market/for_sale
 
