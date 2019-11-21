@@ -22,9 +22,17 @@ API Documentation
       - [Player Market Sale History](#player-market-sale-history)
       - [Card Pack Purchase Lookup](#card-pack-purchase-lookup)
     + [Gameplay](#gameplay)
+      - [Leaderboard - Current Season](#leaderboard---current-season)
+      - [Leaderboard - Previous Season](#leaderboard---previous-season)
       - [Top - Last 50 Matches](#top---last-50-matches)
       - [Player - Last 50 Matches](#player---last-50-matches)
       - [Battle Transaction Lookup](#battle-transaction-lookup)
+    + [Tournaments](#tournaments)
+      - [Upcoming Tournaments](#upcoming-tournaments)
+      - [Tournaments in Progress](#tournaments-in-progress)
+      - [Completed Tournaments](#completed-tournaments)
+      - [Tournament Lookup](#tournament-lookup)
+      - [Tournament Round Results](#tournament-round-results)
     + [Player Status](#player-status)
       - [Get Player Balances](#get-player-balances)
       - [Player Settings - General](#player-settings---general)
@@ -284,6 +292,32 @@ uid: "P-2H7MGOOU74" <br>
 
 ### Gameplay
 
+#### Leaderboard - Current Season
+> https://api.steemmonsters.io/players/leaderboard 
+
+_Example Response:_
+
+>0: {season: 26, player: "th12-huracan", rating: 5382, battles: 748, wins: 474, longest_streak: 13,…} <br>
+battles: 748 <br>
+guild_data: "{"crest":{"banner":"gold","decal":"globe"}}" <br>
+guild_id: "0f886154be77fbe157547c7058af16a501e0d614" <br>
+guild_name: "M00N" <br>
+longest_streak: 13 <br>
+max_rating: 5382 <br>
+player: "th12-huracan" <br>
+rank: "1" <br>
+rating: 5382 <br>
+reward_claim_tx: "01f1042ee085df8bb7b220b0e61f6789329661be" <br>
+season: 26 <br>
+wins: 474 <br>
+1: {season: 26, player: "th12-diablo", rating: 5373, battles: 805, wins: 474, longest_streak: 12,…} <br>
+2: {season: 26, player: "bji1203", rating: 5326, battles: 383, wins: 257, longest_streak: 17,…} <br>
+
+#### Leaderboard - Previous Season
+> https://steemmonsters.com/players/leaderboard?season=X
+
+See [Leaderboard - Current Season](#leaderboard---current-season)
+
 #### Top - Last 50 Matches
 > https://steemmonsters.com/battle/history?player=%24top
 
@@ -313,7 +347,7 @@ winner: "sensful" <br>
 #### Player - Last 50 Matches
 > https://steemmonsters.com/battle/history?player=kiokizz
 
-Last 50 Matches for target player.
+Last 50 Matches for target player. See [Top - Last 50 Matches](#top---last-50-matches).
 
 #### Battle Transaction Lookup
 > https://steemmonsters.com/battle/status?id=53d989a49ce9f8d15d945240f2621682b26b552d
@@ -347,6 +381,116 @@ team: "{…}" <br>
 team_hash: "5c32b85eb1d319ef3ec546aa0feb0975" <br>
 
 ---
+
+### Tournaments
+
+#### Upcoming Tournaments
+> https://api.steemmonsters.io/tournaments/upcoming
+
+_Example Response:_
+
+>created_by: "splinterlands" <br>
+cur_player_entered: "0" <br>
+current_round: null <br>
+data: {rating_level: 2, allowed_cards: "gold_only", best_of: 3,…} <br>
+description: "…" <br>
+entrants: "84" <br>
+entry_fee: "250 DEC" <br>
+id: "d450ea371efbdbcd89c2c5dc0734a37839d4b0ff" <br>
+max_entrants: null <br>
+min_entrants: 4 <br>
+name: "The Golden Rule (Silver)" <br>
+password_pub_key: null <br>
+sponsor_logo_url: "…" <br>
+sponsor_logo_url_lg: "…" <br>
+sponsor_logo_url_med: "…" <br>
+sponsor_name: "Splinterlands" <br>
+start_date: "2019-11-21T13:00:00.000Z" <br>
+status: 0 <br>
+total_prizes_usd: 38 <br>
+
+#### Tournaments in Progress
+> https://api.steemmonsters.io/tournaments/in_progress
+
+_Example Response:_
+
+>[]
+
+#### Completed Tournaments
+> https://api.steemmonsters.io/tournaments/completed
+
+_Example Response:_
+
+>created_by: "splinterlands" <br>
+cur_player_entered: "0" <br>
+current_round: 6 <br>
+data: {rating_level: 2, allowed_cards: "alpha_only", best_of: 3,…} <br>
+description: "…" <br>
+entrants: "65" <br>
+entry_fee: "250 DEC" <br>
+id: "da3d4e350909315089b4fd4fc41d21fa508732ae" <br>
+max_entrants: null <br>
+min_entrants: 4 <br>
+name: "Bring your (silver) A-Game" <br>
+password_pub_key: null <br>
+sponsor_logo_url: "…" <br>
+sponsor_logo_url_lg: "…" <br>
+sponsor_logo_url_med: "…" <br>
+sponsor_name: "Splinterlands" <br>
+start_date: "2019-11-21T05:00:00.000Z" <br>
+status: 2 <br>
+total_prizes_usd: 38 <br>
+
+#### Tournament Lookup
+> https://api.steemmonsters.io/tournaments/find?id=545a2a4162796d720ed26e9951c806dab673d495     
+
+_Example Response:_
+
+>checkin_msg_sent: true <br>
+created_block: 32124192 <br>
+created_by: "steemmonsters" <br>
+created_date: "2019-04-17T13:30:03.000Z" <br>
+current_round: 7 <br>
+data: {rating_level: 3, allowed_cards: "all", best_of: 3,…} <br>
+description: "I've never seen…" <br>
+entry_fee: "5 STEEM" <br>
+format: "single_elimination" <br>
+id: "545a2a4162796d720ed26e9951c806dab673d495" <br>
+max_entrants: null <br>
+min_entrants: 4 <br>
+name: "All the Pointy Things" <br>
+password_pub_key: null <br>
+payment: null <br>
+payment_data: "[{"currency":"STEEM","amount":0,"paid":314.829,"trx_id":"…"}]" <br>
+players: […] <br>
+qualifiers: 24 <br>
+rounds: […]
+sponsor_logo_url: "…" <br>
+sponsor_logo_url_lg: "…" <br>
+sponsor_logo_url_med: "…" <br>
+sponsor_name: "Splinterlands" <br>
+sponsor_url: "https://steemmonsters.com" <br>
+start_date: "2019-04-27T14:00:00.000Z" <br>
+status: 2 <br>
+total_prizes_usd: 128 <br>
+total_rounds: 7 <br>
+
+#### Tournament Round Results
+> https://steemmonsters.com/tournaments/battles?id=a76f9cec935fdfbe1598876b3f753a3577ff64c3&round=3
+
+_Example Response:_
+
+>battles: [{matchup_id: 27964, index: 0, battle_queue_id_1: "…",…},…] <br>
+best_of: 3 <br>
+id: 27964 <br>
+index: 0 <br>
+player_1: "deathcloud" <br>
+player_1_wins: 1 <br>
+player_2: "jacekw" <br>
+player_2_wins: 2 <br>
+round: 3 <br>
+tournament_id: "a76f9cec935fdfbe1598876b3f753a3577ff64c3" <br>
+winner: "jacekw" <br>
 
 ### Player Status
 #### Get Player Balances
