@@ -27,6 +27,7 @@ API Documentation
       - [Top - Last 50 Matches](#top---last-50-matches)
       - [Player - Last 50 Matches](#player---last-50-matches)
       - [Battle Transaction Lookup](#battle-transaction-lookup)
+      - [Ongoing Match - Player](#ongoing-match---player)
     + [Tournaments](#tournaments)
       - [Upcoming Tournaments](#upcoming-tournaments)
       - [Tournaments in Progress](#tournaments-in-progress)
@@ -379,6 +380,41 @@ submit_expiration_date: "2019-11-03T13:57:27.000Z" <br>
 summoner_level: null <br>
 team: "{…}" <br>
 team_hash: "5c32b85eb1d319ef3ec546aa0feb0975" <br>
+
+#### Ongoing Match - Player
+> https://steemmonsters.com/players/outstanding_match?username=kiokizz
+
+_Example Response: no match pending_
+
+> null 
+
+_Example Response: match_
+
+> id: "53f32d43b2a87dc4dad5fb92de8b4190b5e2f354" <br>
+created_block_num: 39858880 <br>
+expiration_block_num: 39858940 <br>
+player: "kiokizz" <br>
+team_hash: null <br>
+match_type: "Ranked" <br>
+mana_cap: null <br>
+opponent: null <br>
+match_block_num: null <br>
+status: 0 <br>
+reveal_tx: null <br>
+reveal_block_id: null <br>
+team: null <br>
+summoner_level: null <br>
+ruleset: null <br>
+inactive: null <br>
+opponent_player: null <br>
+opponent_team_hash: null <br>
+submit_expiration_block_num: null <br>
+settings: null <br>
+app: null <br>
+created_date: "2020-01-12T08:38:30.000Z" <br>
+expiration_date: "2020-01-12T08:41:30.000Z" <br>
+match_date: null <br>
+submit_expiration_date: null <br>
 
 ---
 
