@@ -49,7 +49,7 @@ API Documentation
 ### General
 
 #### Game Settings
-> https://steemmonsters.com/settings
+> https://api.splinterlands.io/settings
 
 _Example Response:_
 
@@ -72,7 +72,7 @@ xp_levels: […] <br>
 General game settings including market prices of DEC and TRX.
 
 #### Transaction Lookup
-> https://steemmonsters.com/transactions/lookup?trx_id=09c8ac9db08d246696fa795cbf03ff07b83303e6
+> https://api.splinterlands.io/transactions/lookup?trx_id=09c8ac9db08d246696fa795cbf03ff07b83303e6
 
 _Example Response:_
 
@@ -91,13 +91,13 @@ success: true <br>
 type: "sm_start_quest" <br>
 
 #### Transaction History
-> https://steemmonsters.com/transactions/history?from_block=37904629  
+> https://api.splinterlands.io/transactions/history?from_block=37904629  
 
 Gets 1000 Splinterlands transactions starting from the target block.
 
 
 #### Global Card Stats
-> https://steemmonsters.com/cards/stats
+> https://api.splinterlands.io/cards/stats
 
 _Example Response:_  
 
@@ -110,7 +110,7 @@ total_burned_xp: "5540" <br>
 total_xp: "879140" <br>
 
 #### Card Details
-> https://steemmonsters.com/cards/get_details
+> https://api.splinterlands.io/cards/get_details
 
 _Example Response:_  
 
@@ -130,7 +130,7 @@ total_printed: 174855 <br>
 type: "Monster" <br>
 
 #### Card Lookup
-> https://steemmonsters.com/cards/find?ids=C3-79-UUT7TSLVN4
+> https://api.splinterlands.io/cards/find?ids=C3-79-UUT7TSLVN4
 
 _Example Response:_  
 
@@ -151,12 +151,12 @@ uid: "C3-79-UUT7TSLVN4" <br>
 xp: 0 <br>
 
 #### Player Collection
-> https://steemmonsters.com/cards/collection/kiokizz
+> https://api.splinterlands.io/cards/collection/kiokizz
 
 Lists every card in a players collection.
 
 #### Check Promo Code
-> https://steemmonsters.com/purchases/check_code?code=K5XF-7N1N
+> https://api.splinterlands.io/purchases/check_code?code=K5XF-7N1N
 
 _Example Response:_
 
@@ -168,7 +168,7 @@ valid: false
 ### Market
 
 #### Purchase Settings
->https://steemmonsters.com/purchases/settings
+>https://api.splinterlands.io/purchases/settings
 
 _Example Response:_
 
@@ -183,7 +183,7 @@ steem_price: 0.1502343 <br>
 usd_enabled: true <br>
 
 #### Market Listings - All
-> https://steemmonsters.com/market/for_sale
+> https://api.splinterlands.io/market/for_sale
 
 _Example Response:_
 
@@ -201,7 +201,7 @@ currency:"USD" <br>
 desc:null <br>
 
 #### Grouped Market Listings - Summary
-> https://steemmonsters.com/market/for_sale_grouped
+> https://api.splinterlands.io/market/for_sale_grouped
 
 _Example Response:_
 
@@ -214,7 +214,7 @@ low_price_bcx: 0.148936170212766 <br>
 qty: 103 <br>
 
 #### Market Transaction Lookup
-> https://steemmonsters.com/market/status?id=d8f8593d637ebdd0bca7994dd7e1a15d9f12efa7-0
+> https://api.splinterlands.io/market/status?id=d8f8593d637ebdd0bca7994dd7e1a15d9f12efa7-0
 
 _Example Response:_
 
@@ -240,7 +240,7 @@ transaction_id: null <br>
 type: "SELL" <br>
 
 #### Player Market Sale History
-> https://steemmonsters.com/market/history?player=kiokizz
+> https://api.splinterlands.io/market/history?player=kiokizz
 
 _Example Response:_
 
@@ -270,7 +270,7 @@ type: "SELL" <br>
 xp: 440 <br>
 
 #### Card Pack Purchase Lookup
-> https://steemmonsters.com/purchases/status?id=P-2H7MGOOU74
+> https://api.splinterlands.io/purchases/status?id=P-2H7MGOOU74
 
 _Example Response:_
 
@@ -315,12 +315,12 @@ wins: 474 <br>
 2: {season: 26, player: "bji1203", rating: 5326, battles: 383, wins: 257, longest_streak: 17,…} <br>
 
 #### Leaderboard - Previous Season
-> https://steemmonsters.com/players/leaderboard?season=X
+> https://api.splinterlands.io/players/leaderboard?season=X
 
 See [Leaderboard - Current Season](#leaderboard---current-season)
 
 #### Top - Last 50 Matches
-> https://steemmonsters.com/battle/history?player=%24top
+> https://api.splinterlands.io/battle/history?player=%24top
 
 _Example Response:_
 
@@ -346,12 +346,12 @@ settings: null <br>
 winner: "sensful" <br>
 
 #### Player - Last 50 Matches
-> https://steemmonsters.com/battle/history?player=kiokizz
+> https://api.splinterlands.io/battle/history?player=kiokizz
 
 Last 50 Matches for target player. See [Top - Last 50 Matches](#top---last-50-matches).
 
 #### Battle Transaction Lookup
-> https://steemmonsters.com/battle/status?id=53d989a49ce9f8d15d945240f2621682b26b552d
+> https://api.splinterlands.io/battle/status?id=53d989a49ce9f8d15d945240f2621682b26b552d
 
 _Example Response:_
 
@@ -382,7 +382,7 @@ team: "{…}" <br>
 team_hash: "5c32b85eb1d319ef3ec546aa0feb0975" <br>
 
 #### Ongoing Match - Player
-> https://steemmonsters.com/players/outstanding_match?username=kiokizz
+> https://api.splinterlands.io/players/outstanding_match?username=kiokizz
 
 _Example Response: no match pending_
 
@@ -505,14 +505,14 @@ sponsor_logo_url: "…" <br>
 sponsor_logo_url_lg: "…" <br>
 sponsor_logo_url_med: "…" <br>
 sponsor_name: "Splinterlands" <br>
-sponsor_url: "https://steemmonsters.com" <br>
+sponsor_url: "https://api.splinterlands.io" <br>
 start_date: "2019-04-27T14:00:00.000Z" <br>
 status: 2 <br>
 total_prizes_usd: 128 <br>
 total_rounds: 7 <br>
 
 #### Tournament Round Results
-> https://steemmonsters.com/tournaments/battles?id=a76f9cec935fdfbe1598876b3f753a3577ff64c3&round=3
+> https://api.splinterlands.io/tournaments/battles?id=a76f9cec935fdfbe1598876b3f753a3577ff64c3&round=3
 
 _Example Response:_
 
@@ -530,7 +530,7 @@ winner: "jacekw" <br>
 
 ### Player Status
 #### Get Player Balances
-> https://steemmonsters.com/players/balances?username=ottermaker
+> https://api.splinterlands.io/players/balances?username=ottermaker
 
 _Example Response:_
 
@@ -549,7 +549,7 @@ player: "ottermaker" <br>
 token: "ECR" <br>
 
 #### Player Settings - General
-> https://steemmonsters.com/players/details?name=kiokizz
+> https://api.splinterlands.io/players/details?name=kiokizz
 
 _Example Response:_
 
@@ -571,12 +571,12 @@ starter_pack_purchase: true <br>
 wins: 28584  <br>
 
 #### Player Settings - Login
-> https://steemmonsters.com/players/login?name=kiokizz
+> https://api.splinterlands.io/players/login?name=kiokizz
 
 More detailed player settings. Known to update more slowly than [Player Settings - General](#player-settings---general).
 
 #### Player Quest
-> https://steemmonsters.com/players/quests?username=kiokizz
+> https://api.splinterlands.io/players/quests?username=kiokizz
 
 _Example Response:_
 
@@ -594,7 +594,7 @@ reward_qty: 6 <br>
 total_items: 5 <br>
 
 #### Referrals
-> https://steemmonsters.com/players/referrals?username=kiokizz
+> https://api.splinterlands.io/players/referrals?username=kiokizz
 
 _Example Response:_
 
@@ -608,7 +608,7 @@ starter_pack_purchase: true <br>
 
 ### Guilds
 #### Guild Members
-> https://steemmonsters.com/guilds/members?guild_id=d14d94bfab9f2532e26c33732cdba602d316f5bf
+> https://api.splinterlands.io/guilds/members?guild_id=d14d94bfab9f2532e26c33732cdba602d316f5bf
 
 _Example Response:_
 
@@ -622,7 +622,7 @@ rating: 3320 <br>
 status: "active" <br>
 
 #### Guild Lookup
-> https://steemmonsters.com/guilds/find?id=d14d94bfab9f2532e26c33732cdba602d316f5bf
+> https://api.splinterlands.io/guilds/find?id=d14d94bfab9f2532e26c33732cdba602d316f5bf
 
 _Example Response:_
 
